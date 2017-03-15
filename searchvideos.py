@@ -42,4 +42,19 @@ for k in parameters:
 print(url3)
 
 data = json.load(urllib2.urlopen(url3))
-print(data)
+
+l = []
+urlVid =  'https://www.googleapis.com/youtube/v3/videos?part=id,statistics&id='
+
+for item in data['items']:
+  l.append([item['id']['videoId'], item['snippet']['title'], item['snippet']['description']])
+
+with open('videoStats.csv', 'wb') as c:
+  writer = csv.writer(c)
+  writer.writerow(['Id', 'Title', 'Description', 'LikeCount', 'DislikeCount', 'ViewCount', 'FavoriteCount', 'CommentCount'])
+
+  for vid in l:
+    stats = json.load(urllib2.urlopen(urlVid + vid[0] + '&key=' + api_key))
+    s = stats['items'][0]['statistics']
+    writer.writerow([vid[0], vid[1].encode('utf8'), vid[2].encode('utf8'), s['likeCount'], s['dislikeCount'], s['viewCount'], s['favoriteCount'], s['commentCount']])
+
