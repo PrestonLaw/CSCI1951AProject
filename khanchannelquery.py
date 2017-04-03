@@ -21,12 +21,14 @@ import pdb
 api_key = 'AIzaSyCrFWiPfGcb5IsyS-wpAMk6eaNdMaC8pXs'
 standard_channel = 'UC4a-Gbdw7vOaccHmFo40b9g'
 medicine_channel = 'UCJayvjGvKEblkA3KYK1BQQw'
+sat_channel = 'UCb6Pzsn8oIFv1N8eGem570'
+adm_channel = 'UCFS0Ox4LDKIx6lJED9r51Cw'
 
 # https://www.googleapis.com/youtube/v3/search?channelId=UC4a-Gbdw7vOaccHmFo40b9g&pageToken=%22%22&order=videoCount&type=playlist&part=snippet&key=AIzaSyCrFWiPfGcb5IsyS-wpAMk6eaNdMaC8pXs&maxResults=5
 
 parameters = {'part': 'snippet',
               'maxResults': '50',
-              'channelId': medicine_channel,
+              'channelId': adm_channel,
               'pageToken': '',
               'order': 'videoCount',
               'type': 'playlist',
@@ -131,7 +133,9 @@ for playlist in l:
 
   playlist["videos"] = getPlaylistVideos(pl_id)
 
-with open('khanMedicinePlaylists.json', 'w') as kp:
+#with open('khanStandardPlaylists.json', 'w') as kp:
+#with open('khanMedicinePlaylists.json', 'w') as kp:
+with open('khanCollegeAdmissionsPlaylists.json', 'w') as kp:
   json.dump(l, kp)
 
 
