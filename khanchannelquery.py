@@ -97,7 +97,7 @@ def getPlaylistVideos(pl_id):
 
   while True:
     # construct the url
-    url3 = url
+    url3 = base_url
     symbol = '?'
     for k in parameters:
         if parameters[k] != '':
