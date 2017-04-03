@@ -5,6 +5,7 @@ from lxml import html, etree
 import json
 from textblob import TextBlob
 import urllib2
+import csv
 
 import pandas as pd
 
@@ -22,9 +23,11 @@ channel = 'UCF0pVplsI8R5kcAqgtoRqoA'
 parameters = {'part': 'snippet',
               'maxResults': '5',
               'order': 'date',
-              'publishedAfter': '2008-08-04T00:00:00Z',
-              'publishedBefore': '2008-11-04T00:00:00Z',
-              'q': 'Mark_Udall',
+              #'publishedAfter': '2008-08-04T00:00:00Z',
+              #'publishedBefore': '2008-11-04T00:00:00Z',
+              'publishedAfter': '2017-01-01T00:00:00Z',
+              'publishedBefore': '2017-01-08T00:00:00Z',
+              'q': 'Khan_Academy',
               'type': 'video',
               'key': api_key}
 
