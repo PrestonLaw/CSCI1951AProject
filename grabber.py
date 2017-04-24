@@ -2,9 +2,9 @@ import json
 import urllib2
 
 api_key = 'AIzaSyCrFWiPfGcb5IsyS-wpAMk6eaNdMaC8pXs'
-queryURL =  'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&order=date&publishedAfter=2008-08-04T00:00:00Z&type=video&key=AIzaSyCrFWiPfGcb5IsyS-wpAMk6eaNdMaC8pXs'
+queryURL =  'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&order=date&publishedAfter=2017-03-01T00:00:00Z&type=video&key=' + api_key
 
-with open('test.json', 'wb') as j:
+with open('raw.json', 'wb') as j:
     results = json.load(urllib2.urlopen(queryURL))
     tok = results['nextPageToken']
 
