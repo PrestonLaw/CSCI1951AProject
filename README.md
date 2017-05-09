@@ -15,7 +15,6 @@ We are using YouTube videos to analyze interesting trends and predict associated
 ---------------------------------------------------------
 ##        Back end (Part 2): Prepocessing (Extraction, Cleaning and Condensing), Machine Learning and Sentiment Analysis Model
 
-##        Back end  <---
 ##    Files:  <code>ipython notebook/python</code>
 
 
