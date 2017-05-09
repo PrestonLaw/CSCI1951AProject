@@ -2,7 +2,7 @@
 We are using YouTube videos to analyze interesting trends and predict associated with each video and it's sentiment analysis.
 
 ---------------------------------------------------------
-##        Back end (Part 1): Data Grabbing by YouTube API (grabber -> clean -> features)
+##        Back end (Part 1): Data Grabbing by YouTube API
 
 ## Back-end source code is here:
 
